@@ -803,8 +803,8 @@ const fs = require('fs'),
   path = require('path')
 cmd(
   {
-    pattern: 'FDGDFGFDGFDGDFGDFG',
-    alias: ['GHFGHGFRHSGHFHH'],
+    pattern: 'baiscope',
+    alias: ['rashu1'],
     react: '\uD83D\uDCD1',
     category: 'download',
     desc: 'baiscope.lk',
@@ -950,7 +950,7 @@ cmd(
 )
 cmd(
   {
-    pattern: 'rashu2',
+    pattern: 'cartoon',
     react: '\uD83D\uDCD1',
     category: 'download',
     desc: 'ginisisilacartoon.net',
@@ -1103,7 +1103,7 @@ cmd(
 )
 cmd(
   {
-    pattern: 'rashu3',
+    pattern: 'apk',
     desc: 'Download apk.',
     category: 'download',
     filename: __filename,
@@ -1182,8 +1182,8 @@ cmd(
 const { sinhalaSub } = require('mrnima-moviedl')
 cmd(
   {
-    pattern: 'rashu1',
-    alias: ['HGJFGHGGGGGGGGGCXBVCB'],
+    pattern: 'sinhalasub',
+    alias: ['smovie'],
     react: '\uD83D\uDCD1',
     category: 'download',
     desc: 'Search movies on sinhalasub and get download links',
