@@ -6,8 +6,8 @@ const axios = require('axios');
 const apilink = 'https://dizer-adaderana-news-api.vercel.app/news'; 
 
 cmd({
-    pattern: "derananews",
-    alias: ["derana", "news3"],
+    pattern: "rashunews",
+    alias: ["derana", "news"],
     react: "📑",
     desc: "",
     category: "news",
@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted }) => {
 
         // Construct the message
         const msg = `
-           📑 QUEEN RASHU MD DERANA NEWS 📑
+           📑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐍𝐄𝐖𝐒 📑
 
 * Title - ${news.title || 'Not available'}
 * News - ${news.description || 'Not available'}
