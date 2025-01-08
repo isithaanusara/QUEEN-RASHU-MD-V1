@@ -76,69 +76,90 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                 switch (selectedOption) {
                     case '1.1':
                         reply(".update MODE:public" );
+                        reply(".restart" );
                         break;
                     case '1.2':               
                         reply(".update MODE:private");
+                        reply(".restart" );
                         break;
                     case '1.3':               
                           reply(".update MODE:group");
+                        reply(".restart" );
                       break;
                     case '1.4':     
                         reply(".update MODE:inbox");
+                        reply(".restart" );
                       break;
                     case '2.1':     
                         reply(".update AUTO_VOICE:true");
+                        reply(".restart" );
                         break;
                     case '2.2':     
                         reply(".update AUTO_VOICE:false");
+                        reply(".restart" );
                     break;
                     case '3.1':    
                         reply(".update AUTO_READ_STATUS:true");
+                        reply(".restart" );
                     break;
                     case '3.2':    
                         reply(".update AUTO_READ_STATUS:false");
+                        reply(".restart" );
                     break;                    
                     case '4.1':    
                         reply(".update AUTO_STICKER:true");
+                        reply(".restart" );
                     break;
                     case '4.2':    
                         reply(".update AUTO_STICKER:false");
+                        reply(".restart" );
                     break;                                        
                     case '5.1':    
                         reply(".update AUTO_REPLY:true");
+                        reply(".restart" );
                     break;
                     case '5.2':    
                         reply(".update AUTO_REPLY:false");
+                        reply(".restart" );
                     break;                        
                     case '6.1':    
                         reply(".update ALLWAYS_OFFLINE:true");
+                        reply(".restart" );
                     break; 
                     case '6.2':    
                         reply(".update ALLWAYS_OFFLINE:false");
+                        reply(".restart" );
                     break;                       
                     case '7.1':    
                         reply(".update READ_MESSAGE:true");
+                        reply(".restart" );
                     break;
                     case '7.2':    
                         reply(".update READ_MESSAGE:false");
+                        reply(".restart" );
                     break;
                     case '8.1':    
                         reply(".update AUTO_REACT:true");
+                        reply(".restart" );
                     break;
                     case '8.2':    
                         reply(".update AUTO_REACT:false");
+                        reply(".restart" );
                     break;
                     case '9.1':    
                         reply(".update ANTI_LINK:true");
                         reply(".update ANTI_LINKK:false");
+                        reply(".restart" );
                     break;
                     case '9.2':    
                         reply(".update ANTI_LINKK:true");
                         reply(".update ANTI_LINK:false");
+                        reply(".restart" );
                     break;
                     case '9.3':    
                         reply(".update ANTI_LINK:false");
                         reply(".update ANTI_LINKK:false");
+                        reply(".restart" );
                     break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");
