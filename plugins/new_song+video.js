@@ -2,7 +2,7 @@ const { cmd, commands } = require('../command');
 const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js');
 
 cmd({
-  pattern: "song8",
+  pattern: "song",
   alias: ["ytmp3", "ytsong"],
   desc: "Download Your Songs.",
   category: "download",
@@ -110,7 +110,7 @@ cmd({
 });
 
 cmd({
-  pattern: "video8",
+  pattern: "video",
   alias: ["ytmp4", "ytvideo"],
   desc: "Download YouTube Videos.",
   category: "download",
