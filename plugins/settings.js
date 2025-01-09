@@ -57,6 +57,10 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 > *9️⃣.1️⃣ Anti Link Off*
 > *9️⃣.2️⃣ Anti Link On*
 > *9️⃣.3️⃣ Anti Link Remove*
+╭══════════════════════○
+┣━ *𝗔𝗡𝗧𝗜 𝗕𝗢𝗧 ✨*
+> *🔟.1️⃣ Anti Bot On*
+> *🔟.2️⃣ Anti Bot Off*
 ╰═══════════════════════○
 
 
@@ -159,6 +163,14 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                     case '9.3':    
                         reply(".update ANTI_LINK:false");
                         reply(".update ANTI_LINKK:false");
+                        reply(".restart" );
+                    break;
+                        case '10.1':     
+                        reply(".update ANTI_BOT:true");
+                        reply(".restart" );
+                        break;
+                    case '10.2':     
+                        reply(".update ANTI_BOT:false");
                         reply(".restart" );
                     break;
                     default:
