@@ -3,7 +3,8 @@ const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js');
 
 cmd({
   pattern: "song",
-  alias: ["ytmp3", "ytsong"],
+  react: "🎵",
+  alias: ["ytmp3", "mp3"],
   desc: "Download Your Songs.",
   category: "download",
   filename: __filename
@@ -47,11 +48,11 @@ cmd({
     let messageCaption = `
 🎶 *𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐒𝐎𝐍𝐆 𝐃𝐀𝐖𝐍𝐋𝐎𝐃𝐄𝐑* 📥
 
-🎵 *TITEL : * ${firstResult.title}
-🤵 *AUTHOR : * ${firstResult.author.name}
-⏱ *DURATION : * ${firstResult.timestamp}
-👀 *VIEWS : * ${firstResult.views}
-🖇️ *URL : * ${firstResult.url}
+🎵 *TITEL :* ${firstResult.title}
+🤵 *AUTHOR :* ${firstResult.author.name}
+⏱ *DURATION :* ${firstResult.timestamp}
+👀 *VIEWS :* ${firstResult.views}
+🖇️ *URL :* ${firstResult.url}
 
 *📥 CHOOSE A DAWNLOAD FORMAT;*
 
@@ -112,7 +113,8 @@ cmd({
 
 cmd({
   pattern: "video",
-  alias: ["ytmp4", "ytvideo"],
+  react: "📽️",
+  alias: ["ytmp4", "mp4"],
   desc: "Download YouTube Videos.",
   category: "download",
   filename: __filename
@@ -156,7 +158,7 @@ cmd({
     const videoDetails = searchResults.results[0];
     const downloadInfo = await ytmp4(videoDetails.url);
 
-    let messageCaption = `*🎧 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕𝐈𝐃𝐄𝐎 𝐃𝐀𝐖𝐍𝐋𝐎𝐃𝐄𝐑📥*\n\n🎵 *TITLE : * ${videoDetails.title}\n\n🤵 *AUTHOR : * ${videoDetails.author.name}\n\n⏱ *RUNTIME : * ${videoDetails.timestamp}\n\n👀 *VIEWS : * ${videoDetails.views}\n\n🖇️ *URL : * ${videoDetails.url}\n\n*📥 CHOOSE A DAWNLOAD FORMAT;*\n\n1️⃣ VIDEO FILE\n\n2️⃣ DOCUMENT FILE\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
+    let messageCaption = `*🎧 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐕𝐈𝐃𝐄𝐎 𝐃𝐀𝐖𝐍𝐋𝐎𝐃𝐄𝐑📥*\n\n🎵 *TITLE :* ${videoDetails.title}\n\n🤵 *AUTHOR :* ${videoDetails.author.name}\n\n⏱ *RUNTIME :* ${videoDetails.timestamp}\n\n👀 *VIEWS :* ${videoDetails.views}\n\n🖇️ *URL :* ${videoDetails.url}\n\n*📥 CHOOSE A DAWNLOAD FORMAT;*\n\n1️⃣ VIDEO FILE\n2️⃣ DOCUMENT FILE\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
     const sentMessage = await bot.sendMessage(from, {
       image: { url: videoDetails.thumbnail || videoDetails.image || '' },
