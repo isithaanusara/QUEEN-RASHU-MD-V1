@@ -5,8 +5,8 @@ const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js');
 // video2
 
 cmd({
-    pattern: "video",
-    alias: ["video2", "ytvideo", "ytdl"],
+    pattern: "mp4",
+    alias: ["video1", "ytvideo1", "ytdl1"],
     react: "🎥",
     desc: "Download YouTube video with selectable quality",
     category: "main",
