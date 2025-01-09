@@ -304,21 +304,21 @@ if (config.ANTI_BAD == "true"){
  if (config.ANTI_BOT == "true"){
   if ( isGroup && !isAdmins && !isMe && !isOwner && isBotAdmins ) {
   if ( mek.id.startsWith("BAE") ) {
-await conn.sendMessage(from, { text: "❌ ```Another Bot's message Detected :``` 💥 *Removed By Queen Rashu Md* ❗\nAnti Bot System on..." })
+await conn.sendMessage(from, { text: "*Another Bot's message Detected*❗\nAnti Bot System on..." })
 if ( config.ANTI_BOT == "true" && isBotAdmins ) {
 await conn.sendMessage(from, { delete: mek.key })
 await conn.groupParticipantsUpdate(from,[sender], 'remove')
   }}
     if ( mek.id.startsWith("QUEENAMDI") ) {
-await conn.sendMessage(from, { text: "❌ ```Another Bot's message Detected :``` *💥 QUEEN RASHU MD* ❗\n*Removed By QUEEN RASHU MD* ❗\nAnti Bot System on..." })
+await conn.sendMessage(from, { text: "*Another Bot's message Detected*\n❗*Removed By QUEEN RASHU MD* ❗\nAnti Bot System on..." })
 if ( config.ANTI_BOT == "true" && isBotAdmins ) {
 await conn.sendMessage(from, { delete: mek.key })
 await conn.groupParticipantsUpdate(from,[sender], 'remove')
   }}
 
-  
+
   }
-  }
+ }
   
 //============================================================================
 
