@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted }) => {
 
         // Construct the message
         const msg = `
-           📑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐍𝐄𝐖𝐒 📑
+ 📑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐍𝐄𝐖𝐒 📑
 
 * Title - ${news.title || 'Not available'}
 * News - ${news.description || 'Not available'}
