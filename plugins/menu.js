@@ -1,21 +1,19 @@
-/*
- DONT COPY
-*/
+const config = require('../config');
+const { cmd, commands } = require('../command');
+const os = require("os");
+const { runtime } = require('../lib/functions');
 
-const config = require('../config')
-const {cmd , commands} = require('../command')
-const os = require("os")
-const {runtime} = require('../lib/functions')
 cmd({
-    pattern: "menu",
-    alias: ["list"],
-    desc: "menu the bot",
-    react: "📜",
-    category: "main"
-},
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        let desc = `*👋 Hello ${pushname}*
+  pattern: "menu",
+  desc: "Commands panel",
+  react: '📚',
+  filename: __filename
+}, async (bot, message, args, options) => {
+  const { from, quoted, reply, pushname } = options;
+
+  try {
+
+    const menuText = `*👋 Hello ${pushname}*
     
      *꧁ྀི*𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃*ྀི꧂*
 *❖╭─────────────···▸*
@@ -46,18 +44,31 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 > *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
-        const vv = await conn.sendMessage(from, { image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg"}, caption: desc }, { quoted: mek });
+    // Send Menu Message
+ const sentMenuMessage = await bot.sendMessage(
+  from,
+  {
+    image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg" },
+    caption: menuText,
+    contextInfo: {
+      mentionedJid: [],
+      isForwarded: true,
+      forwardingScore: 1,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: "120363368882758119@newsletter",
+        newsletterName: "ꪶ𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃ꫂ",
+        serverMessageId: 999,
+      },
+    },
+  },
+  { quoted: message }
+);
 
-        conn.ev.on('messages.upsert', async (msgUpdate) => {
-            const msg = msgUpdate.messages[0];
-            if (!msg.message || !msg.message.extendedTextMessage) return;
+    const menuMessageId = sentMenuMessage.key.id;
 
-            const selectedOption = msg.message.extendedTextMessage.text.trim();
-
-            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
-                switch (selectedOption) {
-                    case '1':
-                        reply(`*꧁◈╾───☉ ᴏᴡɴᴇʀ ᴍᴇɴᴜ ☉───╼◈꧂*
+    // Define responses for each option
+    const menuResponses = {
+      '1': { imageCaption: `*꧁◈╾───☉ ᴏᴡɴᴇʀ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *setting*
@@ -85,10 +96,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '2':               
-                        repl (`*꧁◈╾───☉ ᴄᴏɴᴠᴇʀᴛ ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '2': { imageCaption: 
+`*꧁◈╾───☉ ᴄᴏɴᴠᴇʀᴛ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *sticker*
@@ -110,10 +121,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '3':               
-                        reply(`*꧁◈╾───☉ ᴍᴏᴠɪᴇ ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '3': { imageCaption: 
+`*꧁◈╾───☉ ᴍᴏᴠɪᴇ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *sinhalasub*
@@ -125,10 +136,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '4':               
-                        reply(`*꧁◈╾───☉ ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '4': { imageCaption: 
+`*꧁◈╾───☉ ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *ai*
@@ -144,10 +155,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '5':               
-                        reply(`*꧁◈╾───☉ ᴅᴀᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '5': { imageCaption: 
+`*꧁◈╾───☉ ᴅᴀᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *song*
@@ -179,10 +190,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '6':               
-                        reply(`*꧁◈╾───☉ ᴍᴀɪɴ  ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '6': { imageCaption: 
+`*꧁◈╾───☉ ᴍᴀɪɴ  ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *wiki*
@@ -202,10 +213,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                        break;
-                    case '7':               
-                        reply(`*꧁◈╾───☉ ɢʀᴏᴜᴘ  ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '7': { imageCaption: 
+`*꧁◈╾───☉ ɢʀᴏᴜᴘ  ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *closetime*
@@ -247,10 +258,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
-                       break;
-                    case '8':               
-                        reply(`*꧁◈╾───☉ ꜰᴜɴ ᴍᴇɴᴜ ☉───╼◈꧂*
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+
+      '8': { imageCaption: 
+`*꧁◈╾───☉ ꜰᴜɴ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *ship*
@@ -272,11 +283,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
 
-                        break;
-                    case '10':               
-                        reply(`*꧁◈╾───☉ ᴏᴛʜᴇʀ ᴍᴇɴᴜ ☉───╼◈꧂*
+      '9': { imageCaption: 
+`k` },
+
+      '10': { imageCaption: 
+`*꧁◈╾───☉ ᴏᴛʜᴇʀ ᴍᴇɴᴜ ☉───╼◈꧂*
 
 ╭────────●●►
 │ ➽ *anime*
@@ -291,20 +304,49 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ╰────────────────────●●►
 
 
-> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`);
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` },
+    };
 
+    // Listen for replies to the menu message
+    bot.ev.on("messages.upsert", async event => {
+      const newMessage = event.messages[0];
+      if (!newMessage.message) return;
 
-                        break;
-                    default:
-                        reply("Invalid option. Please select a valid option🔴");
-                }
+      const userReply = newMessage.message.conversation || newMessage.message.extendedTextMessage?.text;
+      const isReplyToMenu = newMessage.message.extendedTextMessage?.contextInfo?.stanzaId === menuMessageId;
 
-            }
-        });
-
-    } catch (e) {
-        console.error(e);
-        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-        reply('An error occurred while processing your request.');
-    }
+if (isReplyToMenu) {
+  const response = menuResponses[userReply];
+  if (response) {
+    // Send image response
+    await bot.sendMessage(
+  from,
+  {
+    image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg" },
+    caption: response.imageCaption,
+    contextInfo: {
+      mentionedJid: [],
+      isForwarded: true,
+      forwardingScore: 1,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: "120363368882758119@newsletter",
+        newsletterName: "ꪶ𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃ꫂ",
+        serverMessageId: 999,
+      },
+    },
+  },
+  { quoted: newMessage }
+);
+  } else {
+    // Handle invalid input
+    await bot.sendMessage(from, {
+      text: "Invalid option! Please reply with a valid number."
+    }, { quoted: newMessage });
+  }
+}
+    });
+  } catch (error) {
+    console.error(error);
+    reply(`Error: ${error.message}`);
+  }
 });
