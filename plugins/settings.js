@@ -4,7 +4,7 @@ const os = require("os")
 
 cmd({
     pattern: "settings",
-    alias: ["setting","st"],
+    alias: ["setting"],
     desc: "settings the bot",
     category: "owner",
     react: "⚙",
