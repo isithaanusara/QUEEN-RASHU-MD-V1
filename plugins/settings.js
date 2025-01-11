@@ -169,7 +169,7 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         reply(".update ANTI_LINKK:false");
                         reply(".restart" );
                     break;
-                        case '10.1':     
+                    case '10.1':     
                         reply(".update ANTI_BOT:true");
                         reply(".restart" );
                         break;
@@ -177,7 +177,7 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         reply(".update ANTI_BOT:false");
                         reply(".restart" );
                     break;
-                        case '11.1':     
+                    case '11.1':     
                         reply(".update ANTI_CALL:true");
                         reply(".restart" );
                         break;
