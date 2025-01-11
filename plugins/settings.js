@@ -4,7 +4,7 @@ const os = require("os")
 
 cmd({
     pattern: "settings",
-    alias: ["setting"],
+    alias: ["setting","st"],
     desc: "settings the bot",
     category: "owner",
     react: "⚙",
@@ -13,7 +13,7 @@ cmd({
 
 },
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
-    if (!isOwner) return reply("❌ You are not the owner!");
+    if (!isOwner) return reply("*❌ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐓𝐇𝐄 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐁𝐎𝐓 𝐎𝐖𝐍𝐄𝐑!*");
     try {
         let desc = `* _𝑸𝑼𝑬𝑬𝑵 𝑹𝑨𝑺𝑯𝑼 𝑴𝑫 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺_
 
@@ -61,10 +61,6 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 ┣━ *𝗔𝗡𝗧𝗜 𝗕𝗢𝗧 ✨*
 > *🔟.1️⃣ Anti Bot On*
 > *🔟.2️⃣ Anti Bot Off*
-╭══════════════════════○
-┣━ *𝗔𝗡𝗧𝗜 𝗖𝗔𝗟𝗟 ✨*
-> *1️⃣1️⃣.1️⃣ Anti Call On*
-> *1️⃣1️⃣.2️⃣ Anti Call Off*
 ╰═══════════════════════○
 
 
@@ -175,14 +171,6 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         break;
                     case '10.2':     
                         reply(".update ANTI_BOT:false");
-                        reply(".restart" );
-                    break;
-                    case '11.1':     
-                        reply(".update ANTI_CALL:true");
-                        reply(".restart" );
-                        break;
-                    case '11.2':     
-                        reply(".update ANTI_CALL:false");
                         reply(".restart" );
                     break;
                     default:
