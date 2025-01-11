@@ -358,7 +358,24 @@ if (!isReact && senderNumber !== botNumber) {
     }
 }
 
-
+//=================================ANTICALL===========================================
+conn.ev.on("call", async _0x5181ca => {
+        if (config.ANTI_CALL == "true") {
+          for (const _0x38c5aa of _0x5181ca) {
+            if (_0x38c5aa.status == "offer") {
+              if (_0x38c5aa.isGroup == false) {
+                await conn.sendMessage(_0x38c5aa.from, {
+                  'text': "*Call rejected automatically because owner is busy ⚠️*\n\n*හිමිකරු කාර්යබහුල බැවින් ඇමතුම ස්වයංක්‍රීයව ප්‍රතික්ෂේප විය කරැණාකර මද වෙලාවකින් උත්සහ කරන්න ⏰*",
+                  'mentions': [_0x38c5aa.from]
+                });
+                await conn.rejectCall(_0x38c5aa.id, _0x38c5aa.from);
+              } else {
+                await conn.rejectCall(_0x38c5aa.id, _0x38c5aa.from);
+              }
+            }
+          }
+        }
+      });
 
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
