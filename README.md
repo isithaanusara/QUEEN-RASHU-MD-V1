@@ -2,7 +2,7 @@
 
 
  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F01&lines=QUEEN+RASHU+MD+WHATSAPP+BOT)](https://git.io/typing-svg)
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+<img src="https://github.com/NipunHarshana0/NHSR-MD/blob/91740c65377030c8818b4537610cd7fd92df862d/20250102_101447.jpg" height="90" width="100%">
 
 <p align="center">
 <a href="https://github.com/NipunHarshana0/QUEEN-RASHU-MD-V1">
