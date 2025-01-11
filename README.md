@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://github.com/NipunHarshana0/QUEEN-RASHU-MD-V1">
-    <img src=https://github.com/NipunHarshana0/NHSR-MD/blob/91740c65377030c8818b4537610cd7fd92df862d/20250102_101447.jpg"  width="700px">
+    <img src="  width="700px">
 </a>
 <hr>
  <p align="center">
