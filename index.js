@@ -359,23 +359,21 @@ if (!isReact && senderNumber !== botNumber) {
 }
 
 //=================================ANTICALL===========================================
-conn.ev.on("call", async _0x5181ca => {
-        if (config.ANTI_CALL == "true") {
-          for (const _0x38c5aa of _0x5181ca) {
-            if (_0x38c5aa.status == "offer") {
-              if (_0x38c5aa.isGroup == false) {
-                await conn.sendMessage(_0x38c5aa.from, {
-                  'text': "*Call rejected automatically because owner is busy ⚠️*\n\n*හිමිකරු කාර්යබහුල බැවින් ඇමතුම ස්වයංක්‍රීයව ප්‍රතික්ෂේප විය කරැණාකර මද වෙලාවකින් උත්සහ කරන්න ⏰*",
-                  'mentions': [_0x38c5aa.from]
-                });
-                await conn.rejectCall(_0x38c5aa.id, _0x38c5aa.from);
-              } else {
-                await conn.rejectCall(_0x38c5aa.id, _0x38c5aa.from);
-              }
-            }
-          }
+conn.ev.on("call", async (callEvents) => {
+  if (config.ANTI_CALL === "true") {
+    for (const callEvent of callEvents) {
+      if (callEvent.status === "offer") {
+        if (!callEvent.isGroup) {
+          await conn.sendMessage(callEvent.from, {
+            text: "*Call rejected automatically because the owner is busy ⚠️*\n\n*🥳𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐁𝐎𝐓 හිමිකරු කාර්යබහුල බැවින් ඇමතුම ස්වයංක්‍රීයව ප්‍රතික්ෂේප විය කරැණාකර මද වෙලාවකින් උත්සහ කරන්න ⏰*\n\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*",
+            mentions: [callEvent.from],
+          });
         }
-      });
+        await conn.rejectCall(callEvent.id, callEvent.from);
+      }
+    }
+  }
+});
 
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
