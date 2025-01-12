@@ -1,3 +1,16 @@
+const {
+  Buffer
+} = require("buffer");
+const axios = require("axios");
+const {
+  cmd,
+  commands
+} = require("../lib/command");
+const Esana = require("@sl-code-lords/esana-news");
+var api = new Esana();
+const DYXT_NEWS = require("@dark-yasiya/news-scrap");
+const newss = new DYXT_NEWS();
+
 const cmdDetails = {
   pattern: "lankadeepa",
   alias: ["lanka", "news4"],
