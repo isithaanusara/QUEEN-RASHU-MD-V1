@@ -28,7 +28,7 @@
 
 ## QR CODE SCAN
 
-<a href="https://qr-dexter-md-b3cdc18409e4.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-QR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
+<a href="https://paircoderashu-da08a61d6074.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-QR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
 ## DEPLOY IN HEROKU
 
  [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/DEXTER-BOT-1/DEXTER-V1-MD/)
@@ -44,14 +44,14 @@
 
 ## Contributions
 
-Contributions to Dexter-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
+Contributions to Queen-Rashu-Md are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## License
 
-The DEXTER-MD is released.
+The QUEEN-RASHU-MD is released.
 
-Enjoy the diverse features of the DEXTER-MD  to enhance your conversations and make your WhatsApp experience more interesting!
+Enjoy the diverse features of the QUEEN-RASHU-MD  to enhance your conversations and make your WhatsApp experience more interesting!
 
 ## Developer:
-- [**WhatsApp**](https://wa.me/94789958225)
+- [**WhatsApp**](https://wa.me/94727319036)
 
