@@ -41,6 +41,8 @@
     "mime-types":"2.1.35",
     "file-type":"16.5.3",
     "ytdl-core": "^4.11.5",
+    "@dark-yasiya/news-scrap" : "latest",
+    "@sl-code-lords/esana-news" : "latest",
     "@dark-yasiya/yt-dl.js": "latest",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",
