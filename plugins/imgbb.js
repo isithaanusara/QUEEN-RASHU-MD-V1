@@ -121,7 +121,7 @@ cmd(img2UrlCommand, async (context, args, utils, { reply, quoted }) => {
       const uploadedImageUrl = await image2url(savedFilePath);
       console.log(uploadedImageUrl);
       await reply(
-        `📍 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐔𝐑𝐋 𝐆𝐄 𝐄𝐑𝐀𝐓𝐄𝐃:\n\n\n${uploadedImageUrl.result.url}\n\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`
+        `📍 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐔𝐑𝐋 𝐆𝐄𝐍𝐀𝐑𝐀𝐓𝐄𝐃:\n\n\n${uploadedImageUrl.result.url}\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`
       );
 
       await require('fs').promises.unlink(savedFilePath);
