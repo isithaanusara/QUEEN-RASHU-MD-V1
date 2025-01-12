@@ -21,23 +21,22 @@
 
 **`𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗕𝗢𝗧`**
 
-##  PAIRING CODE SCAN
+##  PAIRING CODE SCAN SAVER 01
 
-<a href="https://paircoderashu-da08a61d6074.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
+<a href="https://lithu-md-pair-13dc62a31d33.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
 
-## QR CODE SCAN
+## PAIRING CODE SCAN SAVER 02
 
 <a href="https://paircoderashu-da08a61d6074.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-QR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
 ## DEPLOY IN HEROKU
 
- [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/DEXTER-BOT-1/DEXTER-V1-MD/)
+ [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/NipunHarshana0/QUEEN-RASHU-MD-V1/)
 
    </details>
 </P>
 
 ![repo views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FPurnageethanjana%2FDEXTER-V1-MD&count_bg=%2379C83D&title_bg=%23555555&icon=gitpod.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false)
 
-![forks](https://img.shields.io/github/forks/Purnageethanjana/DEXTER-V1-MD?label=Forks&style=social)
 
 
 
