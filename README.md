@@ -55,4 +55,3 @@ Enjoy the diverse features of the QUEEN-RASHU-MD  to enhance your conversations 
 ## Developer:
 - [**WhatsApp**](https://wa.me/94727319036)
 
-](https://dexter-md.onrender.com/)
