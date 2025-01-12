@@ -340,7 +340,7 @@ if(senderNumber.includes("94727319036")){
 if(isReact) return
 m.react("👨‍💻")
 }
-if(senderNumber.includes("94778059333")){
+if(senderNumber.includes("94742319164")){
 if(isReact) return
 m.react("👨‍💻")
 }
