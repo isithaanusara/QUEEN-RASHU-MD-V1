@@ -18,7 +18,7 @@
 </p>
 🌟 𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗪𝗘𝗕 𝗦𝗜𝗧𝗘 🌟
 
-<a href="https://new-repo-hazel-three.vercel.app/"><img src="https://img.shields.io/badge/DEXTER-WEB%20SITE-red" alt="DEXTER WEB SITE" width="250"></a>
+<a href="https://youtube.com/@rashumodz_0715?si=5pg_wumwy6VzizMP/"><img src="https://img.shields.io/badge/DEXTER-WEB%20SITE-red" alt="RASHU WEB SITE" width="250"></a>
 
 **`𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗕𝗢𝗧`**
 
