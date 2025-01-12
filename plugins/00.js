@@ -22,18 +22,20 @@ async (conn, mek, m, { from, prefix, quoted, q, reply, waitForReply }) => {
 
         let yts = yt.results[0];
 
-        let ytmsg = `╭━━━〔 *PANHWAR-MD* 〕━━━┈⊷
-┃▸╭───────────
-┃▸┃๏ *VIDEO DOWNLOADER*
-┃▸└───────────···๏
-╰────────────────┈⊷
-╭━━❐━⪼
-┇๏ *Title* -  ${yts.title}
-┇๏ *Duration* - ${yts.timestamp}
-┇๏ *Views* -  ${yts.views}
-┇๏ *Author* -  ${yts.author.name}
-┇๏ *Link* -  ${yts.url}
-╰━━❑━⪼`;
+        let ytmsg = `╭━━━〔 *𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃* 〕━━━╮
+
+* *ʋιԃҽσ ԃαɯɳʅσαԃιɳɠ 🎥*
+
+╰──────────────────────╯
+╭━┉┉┉┉┉┉┉┉┉┉┉┉━❐━⪼
+┇๏ *𝑻𝒊𝒕𝒍𝒆* -  _${yts.title}_
+┇๏ *𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏* - _${yts.timestamp}_
+┇๏ *𝑽𝒊𝒆𝒘𝒔* -  _${yts.views}_
+┇๏ *𝑨𝒖𝒕𝒉𝒐𝒓* -  _${yts.author.name}_
+┇๏ *𝑳𝒊𝒏𝒌* -  _${yts.url}_
+╰━┉┉┉┉┉┉┉┉┉┉┉┉━❑━⪼
+
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
         // Send video details
         await conn.sendMessage(from, { image: { url: yts.thumbnail || yts.image || '' }, caption: `${ytmsg}` }, { quoted: mek });
@@ -46,7 +48,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply, waitForReply }) => {
         await conn.sendMessage(from, {
             video: { url: ytdl.download.url },
             mimetype: "video/mp4",
-            caption: `> *${yts.title}*\n> *Quality: ${quality}*\n> *© Pᴏᴡᴇʀᴇᴅ Bʏ Ansar-Panhwar ♡*`
+            caption: `> *${yts.title}*\n> *Quality: ${quality}*\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`
         }, { quoted: mek });
     } catch (e) {
         console.log(e);
@@ -59,7 +61,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply, waitForReply }) => {
 cmd({
     pattern: "song00",
     alias: ["audio2","ytdl2","ytsong2"],
-    react: "🎶",
+    react: "🎧",
     desc: "Download Youtube song",
     category: "main",
     use: '.song < Yt url or Name >',
@@ -76,19 +78,20 @@ if(yt.results.length < 1) return reply("Results is not found !")
 let yts = yt.results[0]  
 const ytdl = await ytmp3(yts.url)
 		
-let ytmsg = `╭━━━〔 *PANHWAR-MD* 〕━━━┈⊷
-┃▸╭───────────
-┃▸┃๏ *MUSIC DOWNLOADER*
-┃▸└───────────···๏
-╰────────────────┈⊷
-╭━━❐━⪼
-┇๏ *Tital* -  ${yts.title}
-┇๏ *Duration* - ${yts.timestamp}
-┇๏ *Views* -  ${yts.views}
-┇๏ *Author* -  ${yts.author.name} 
-┇๏ *Link* -  ${yts.url}
-╰━━❑━⪼
-> *© Pᴏᴡᴇʀᴇᴅ Bʏ Ansar-Panhwar ♡*`
+let ytmsg = `╭━━━〔 *𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃* 〕━━━╮
+
+* ʂσɳɠ ԃαɯɳʅσαԃιɳɠ 🎧
+
+╰──────────────────────╯
+╭━┉┉┉┉┉┉┉┉┉┉┉┉━❐━⪼
+┇๏ *𝑻𝒊𝒕𝒍𝒆* -  _${yts.title}_
+┇๏ *𝑫𝒖𝒓𝒂𝒕𝒊𝒐𝒏* - _${yts.timestamp}_
+┇๏ *𝑽𝒊𝒆𝒘𝒔* -  _${yts.views}_
+┇๏ *𝑨𝒖𝒕𝒉𝒐𝒓* -  _${yts.author.name}_
+┇๏ *𝑳𝒊𝒏𝒌* -  _${yts.url}_
+╰━┉┉┉┉┉┉┉┉┉┉┉┉━❑━⪼
+
+> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`
 // SEND DETAILS
 await conn.sendMessage(from, { image: { url: yts.thumbnail || yts.image || '' }, caption: `${ytmsg}`}, { quoted: mek });
 
@@ -96,7 +99,7 @@ await conn.sendMessage(from, { image: { url: yts.thumbnail || yts.image || '' },
 await conn.sendMessage(from, { audio: { url: ytdl.download.url }, mimetype: "audio/mpeg" }, { quoted: mek })
 
 // SEND DOC TYPE
-await conn.sendMessage(from, { document: { url: ytdl.download.url }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `> *© Pᴏᴡᴇʀᴇᴅ Bʏ Ansar-Panhwar ♡*` }, { quoted: mek })
+await conn.sendMessage(from, { document: { url: ytdl.download.url }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` }, { quoted: mek })
 
 
 } catch (e) {
