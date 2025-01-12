@@ -1,5 +1,3 @@
-const DYXT_NEWS = require("@dark-yasiya/news-scrap");
-const newss = new DYXT_NEWS();
 const cmdDetails = {
   pattern: "lankadeepa",
   alias: ["lanka", "news4"],
@@ -48,6 +46,6 @@ cmd(cmdDetails, async (bot, message, args, { from, quoted, reply }) => {
     await bot.sendMessage(from, messageDetails, options);
   } catch (error) {
     console.error(error);
-    reply(error.message);
+    reply(`hutta error:${e}`);
   }
 });
