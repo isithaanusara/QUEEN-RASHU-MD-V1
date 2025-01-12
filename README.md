@@ -70,7 +70,6 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   build:
 
