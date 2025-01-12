@@ -1,4 +1,3 @@
-[
 ## <p align="center"> QUEEN-RASHU-MD WHATSAPP BOT
 <br>
 
