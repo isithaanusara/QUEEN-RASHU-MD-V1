@@ -1,5 +1,5 @@
 
-## <p align="center"> DEXTER-V1-MD WHATSAPP BOT
+## <p align="center"> QUEEN-RASHU-MD WHATSAPP BOT
 <br>
 
 <p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=WELCOME+TO+THE+QUEEN-RASHU-MD;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+NIPUN;RELEASED+DATE+24%2F03%2F2024." alt="Typing SVG" /></a>
@@ -24,7 +24,7 @@
 
 ##  PAIRING CODE SCAN
 
-<a href="https://dexter-md.onrender.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
+<a href="https://paircoderashu-da08a61d6074.herokuapp.com/"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
 
 ## QR CODE SCAN
 
