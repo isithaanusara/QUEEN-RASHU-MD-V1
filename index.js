@@ -348,6 +348,14 @@ m.react("👨‍💻")
         conn.sendPresenceUpdate('unavailable'); // Sets the bot's last seen status
     }
 
+//============ AUTO STATUS REPLY ============
+
+  if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REPLY === "true"){
+  const user = mek.key.participant
+  const text = `${config.AUTO_STATUS__MSG}`
+  await conn.sendMessage(user, { text: text, react: { text: '💜', key: mek.key } }, { quoted: mek })
+  }
+
 //=================================AUTOREACT==========================================
 if (!isReact && senderNumber !== botNumber) {
     if (config.AUTO_REACT === 'true') {
