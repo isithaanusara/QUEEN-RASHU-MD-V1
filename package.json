@@ -29,6 +29,7 @@
     "@dark-yasiya/imgbb.js": "latest",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",
+    "wikipedia":"2.1.2",
     "ytsearch-venom":"1.0.0",
     "google-tts-api":"2.0.2",
     "wa-sticker-formatter":"4.4.4",
