@@ -7,7 +7,7 @@ const fs = require('fs-extra')
 var videotime = 60000 // 1000 min
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 cmd({
-    pattern: "yts2",
+    pattern: "yts",
     alias: ["ytsearch"],
     use: '.yts sameer kutti',
     react: "🔎",
@@ -29,7 +29,7 @@ return await conn.sendMessage(from , { text: '*Error !!*' }, { quoted: mek } )
 }
 var mesaj = '';
 arama.all.map((video) => {
-mesaj += ' *🖲️' + video.title + '*\n🔗 ' + video.url + '\n\n'
+mesaj += ' *📍' + video.title + '*\n🌟📃 ' + video.url + '\n\n\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*'
 });
 await conn.sendMessage(from , { text:  mesaj }, { quoted: mek } )
 } catch (e) {
