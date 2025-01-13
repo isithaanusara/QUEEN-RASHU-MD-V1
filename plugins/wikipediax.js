@@ -1,6 +1,6 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
-const wiki = require('wikipedia');
+const wiki = require('wikijs').default; 
 
 // Define the Wikipedia search command
 cmd({
@@ -18,8 +18,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         }
 
         // Fetch summary from Wikipedia
-        const summary = await wiki.summary(q);
-        
+        const page = await wiki().page(q);
+        const summary = await page.summary();
+
+        // Get the image (check if it exists)
+        const images = await page.images();
+        const imageUrl = images.length > 0 ? images[0] : null; // Use the first image if available
+
         // Format the reply
         let replyText = `
 *📚 Wikipedia Summary 📚*
@@ -30,12 +35,17 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 📝 *Summary*: _${summary.extract}_
 
-🔗 *URL*: ${summary.content_urls.desktop.page}
+🔗 *URL*: ${page.url()}
 
 > *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
-        // Send the reply with the thumbnail image
-        await conn.sendMessage(from, { image: { url: summary.originalimage.source }, caption: replyText }, { quoted: mek });
+        // Send the reply with the image if available
+        if (imageUrl) {
+            await conn.sendMessage(from, { image: { url: imageUrl }, caption: replyText }, { quoted: mek });
+        } else {
+            // If no image, send text-only reply
+            await conn.sendMessage(from, { text: replyText }, { quoted: mek });
+        }
 
     } catch (e) {
         console.log(e);
