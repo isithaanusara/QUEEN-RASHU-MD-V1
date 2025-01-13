@@ -187,11 +187,11 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         reply(".update ANTI_BOT:false");
                         reply(".restart" );
                     break;
-                    case '10.1':     
+                    case '11.1':     
                         reply(".update AUTO_STATUS_REPLY:true");
                         reply(".restart" );
                         break;
-                    case '10.2':     
+                    case '11.2':     
                         reply(".update AUTO_STATUS_REPLY:false");
                         reply(".restart" );
                     break;
