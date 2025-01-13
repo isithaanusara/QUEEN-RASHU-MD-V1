@@ -53,7 +53,7 @@ async function checkAndPostNews(conn, groupId) {
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
            await conn.sendMessage(groupId, { 
-                text: `*🔵𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓!*\n██████████████████████████████████████████\n\n\n📰 *${newsItem.title}*\n${newsItem.content}\n\n${newsItem.date}\n\n> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*\n> *𝗡𝗔𝗗𝗘𝗘𝗡 - 𝗠𝗗*` 
+                text: `*📍𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐀𝐔𝐓𝐎 𝐍𝐄𝐖𝐒📑*\n\n*╭───────╎◈𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓◈╎──────╮*\n\n* 🎀⭕ *${newsItem.title} 📰*\n_${newsItem.content}_\n\n~${newsItem.date}~\n\n🌟 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 🗞️\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
@@ -82,7 +82,7 @@ cmd({
                 if (!activeGroups[from]) {
                     activeGroups[from] = true;
 
-                    await conn.sendMessage(from, { text: "🇱🇰 Auto 24/7 News Activated.\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto 24/7 News Activatrd 🌟🗞️🇱🇰*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
 
                     if (!activeGroups['interval']) {
                         activeGroups['interval'] = setInterval(async () => {
@@ -95,7 +95,7 @@ cmd({
                     }
 
                 } else {
-                    await conn.sendMessage(from, { text: "*✅ 24/7 News Already Activated.*\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "*𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto 24/7 News Already Activatrd ✅*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
@@ -132,7 +132,7 @@ cmd({
                         delete activeGroups['interval'];
                     }
                 } else {
-                    await conn.sendMessage(from, { text: "🛑 24/7 News is not active in this group.\n\n> ©𝗡𝗔𝗗𝗘𝗘𝗡 𝗠𝗗" });
+                    await conn.sendMessage(from, { text: "*🛑 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 Auto News Is Not Active In This Group.*\n\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*" });
                 }
             } else {
                 await conn.sendMessage(from, { text: "🚫 This command can only be used by group admins or the bot owner." });
