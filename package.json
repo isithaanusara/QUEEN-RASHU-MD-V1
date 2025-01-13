@@ -44,6 +44,9 @@
     "@dark-yasiya/news-scrap" : "latest",
     "@sl-code-lords/esana-news" : "latest",
     "@dark-yasiya/yt-dl.js": "latest",
+    "@dark-yasiya/news-scrap": "1.0.1",
+    "hirunews-scrap": "^1.1.2",
+    "google-tts-api":"2.0.2",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",
     "mrnima-moviedl":"1.0.0"
