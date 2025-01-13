@@ -59,8 +59,12 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 > *9️⃣.3️⃣ Anti Link Remove*
 ╭══════════════════════○
 ┣━ *𝗔𝗡𝗧𝗜 𝗕𝗢𝗧 ✨*
-> *🔟.1️⃣ Anti Bot On*
-> *🔟.2️⃣ Anti Bot Off*
+> *1️⃣0️⃣.1️⃣ Anti Bot On*
+> *1️⃣0️⃣.2️⃣ Anti Bot Off*
+╭══════════════════════○
+┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗥𝗘𝗣𝗟𝗬 ✨*
+> *1️⃣1️⃣.1️⃣ Auto Status Reply On*
+> *1️⃣1️⃣.2️⃣ Auto Status Reply Off*
 ╰═══════════════════════○
 
 
@@ -171,6 +175,14 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         break;
                     case '10.2':     
                         reply(".update ANTI_BOT:false");
+                        reply(".restart" );
+                    break;
+                    case '10.1':     
+                        reply(".update AUTO_STATUS_REPLY:true");
+                        reply(".restart" );
+                        break;
+                    case '10.2':     
+                        reply(".update AUTO_STATUS_REPLY:false");
                         reply(".restart" );
                     break;
                     default:
