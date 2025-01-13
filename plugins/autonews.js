@@ -53,7 +53,7 @@ async function checkAndPostNews(conn, groupId) {
 
         if (!lastNewsTitles[groupId].includes(newsItem.title)) {
            await conn.sendMessage(groupId, { 
-                text: `*📍𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐀𝐔𝐓𝐎 𝐍𝐄𝐖𝐒📑*\n\n*╭───────╎◈𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓◈╎──────╮*\n\n* 🎀⭕ *${newsItem.title} 📰*\n_${newsItem.content}_\n\n~${newsItem.date}~\n\n🌟 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 🗞️\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` 
+                text: `*📍𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝐀𝐔𝐓𝐎 𝐍𝐄𝐖𝐒📑*\n\n*╭─────╎◈𝐍𝐄𝐖𝐒 𝐀𝐋𝐄𝐑𝐓◈╎────╮*\n\n* 🎀⭕ *${newsItem.title} 📰*\n_${newsItem.content}_\n\n~${newsItem.date}~\n\n🌟 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 🗞️\n> *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*` 
             });
             lastNewsTitles[groupId].push(newsItem.title);
 
