@@ -208,7 +208,7 @@ cmd({
   }
 });
 cmd({
-  'pattern': "video",
+  'pattern': "video99",
   'desc': "To download videos.",
   'react': '🎥',
   'category': "download",
