@@ -143,3 +143,27 @@ async (conn, mek, m, { from }) => {
         await conn.sendMessage(from, { text: 'Sorry, there was an error fetching the owner contact.' }, { quoted: mek });
     }
 });
+
+cmd({
+    pattern: "boom",
+    desc: "Send a custom message any number of times (owner only).",
+    category: "main",
+    react: "💣",
+    filename: __filename
+},
+async (conn, mek, m, { from, args, senderNumber, isOwner, reply }) => {
+    try {
+        if (!isOwner) {
+            return reply('❌ This command is restricted to the owner only.');
+        }
+        const count = parseInt(args[0]) || 10;
+        const customText = args.slice(1).join(' ') || 'Boom!';
+        for (let i = 0; i < count; i++) {
+            await conn.sendMessage(from, { text: customText });
+        }
+        reply(`✅ Sent ${count} messages.`);
+    } catch (e) {
+        console.log(e);
+        reply(`${e}`);
+    }
+});
