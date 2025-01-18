@@ -70,7 +70,7 @@ cmd({
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363368882758119@newsletter',
-                    newsletterName: '『 𝐐𝐔𝐄𝐄𝐄 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 』',
+                    newsletterName: '『 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 』',
                     serverMessageId: 143
                 }
             }
