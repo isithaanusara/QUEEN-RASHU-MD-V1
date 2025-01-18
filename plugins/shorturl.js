@@ -62,7 +62,7 @@ cmd({
 */
  // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://i.ibb.co/DR0k2XM/mrfrankofc.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/BsjkCDP/9555.jpg` },  // Image URL
             caption: caption,
             contextInfo: {
                 mentionedJid: [m.sender],
