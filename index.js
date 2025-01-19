@@ -71,6 +71,10 @@ const conn = makeWASocket({
         version
         })
     
+const axios = require('axios');
+const fs = require('fs');
+const path = require('path')
+
 conn.ev.on("connection.update", async (update) => {
   const {
     connection,
@@ -78,7 +82,7 @@ conn.ev.on("connection.update", async (update) => {
   } = update;
 
   if (connection === "close") {
-    if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+    if (lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
       connectToWA();
     }
   } else if (connection === "open") {
@@ -90,21 +94,22 @@ conn.ev.on("connection.update", async (update) => {
     ];
 
     console.log("Extracting Plugins...⬆");
-    for (let i = 0; i < plugins.length; i++) {
-      let response = await axios.get(plugins[i].url);
-      let data = response.data;
-      await fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
-    }
-    console.log("✅ Plugin installed and Connected...");
 
-    const path = require("path");
-    fs.readdirSync("./plugins/").forEach(file => {
-      if (path.extname(file).toLowerCase() == ".js") {
-        require('./plugins/' + file);
+    try {
+      for (let i = 0; i < plugins.length; i++) {
+        let response = await axios.get(plugins[i].url);
+        let data = response.data;
+        fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
       }
-    });
-    console.log("All Plugins installed ⚡")
-console.log('Queen Rashu Md Bot connected to whatsapp ✅')
+      console.log("✅ Plugin installed and Connected...");
+
+      fs.readdirSync("./plugins/").forEach(file => {
+        if (path.extname(file).toLowerCase() === ".js") {
+          require('./plugins/' + file);
+        }
+      });
+      console.log("All Plugins installed ⚡");
+      console.log('Queen Rashu Md Bot connected to WhatsApp ✅');
 
 let up = `* *~𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃~ CONNECTED SUCCESSFUL 👨‍💻*
 
