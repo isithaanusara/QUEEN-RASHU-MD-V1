@@ -63,26 +63,14 @@ const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info
 var { version } = await fetchLatestBaileysVersion()
 
 const conn = makeWASocket({
-  logger: P({ level: 'fatal' }), // Sets the logging level to 'fatal'
-  printQRInTerminal: true, // Prints the QR code in the terminal
-  browser: ["MR-Kushan", "safari", "1.0.0"], // Browser information
-  fireInitQueries: false, // Disables firing initial queries
-  shouldSyncHistoryMessage: false, // Disables history message syncing
-  downloadHistory: false, // Disables downloading message history
-  syncFullHistory: false, // Disables syncing full history
-  generateHighQualityLinkPreview: true, // Enables high-quality link previews
-  auth: state,
-  version
-  getMessage: async (msg) => { // Function to retrieve a message
-    if (_0x2db583) {
-      const loadedMessage = await _0x2db583.loadMessage(msg.remoteJid, msg.id, undefined);
-      return loadedMessage.message || undefined;
-    }
-    return { conversation: "An Error Occurred, Repeat Command!" };
-  }
-});
+        logger: P({ level: 'silent' }),
+        printQRInTerminal: false,
+        browser: Browsers.macOS("Firefox"),
+        syncFullHistory: true,
+        auth: state,
+        version
+        })
 
-// Event listener for connection updates
 conn.ev.on("connection.update", async (update) => {
   const { connection, lastDisconnect } = update;
 
