@@ -1,7 +1,7 @@
 ## <p align="center"> QUEEN-RASHU-MD WHATSAPP BOT
 <br>
 
-<p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=WELCOME+TO+THE+QUEEN-RASHU-MD;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+NIPUN;RELEASED+DATE+24%2F03%2F2024." alt="Typing SVG" /></a>
+<p align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=WELCOME+TO+QUEEN-RASHU-MD;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+NIPUN;RELEASED+DATE+20%2F01%2F2025." alt="Typing SVG" /></a>
 </p>
 
 
@@ -15,9 +15,9 @@
    - You will get a session ID in WhatsApp, copy the ID only.
    - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**p
 </p>
-🌟 𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗪𝗘𝗕 𝗦𝗜𝗧𝗘 🌟
+🌟 𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗬𝗢𝗨𝗧𝗨𝗕𝗘 🌟
 
-<a href="https://youtube.com/@rashumodz_0715?si=5pg_wumwy6VzizMP/"><img src="https://img.shields.io/badge/RASHU-WEB%20SITE-red" alt="RASHU WEB SITE" width="250"></a>
+<a href="https://youtube.com/@rashumodz_0715?si=5pg_wumwy6VzizMP/"><img src="https://img.shields.io/badge/RASHU-WEB%20SITE-red" alt="RASHU YOUTUBE" width="250"></a>
 
 **`𝗤𝗨𝗘𝗘𝗡 𝗥𝗔𝗦𝗛𝗨 𝗠𝗗 𝗕𝗢𝗧`**
 
