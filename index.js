@@ -28,6 +28,11 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
+const { fromBuffer } = require('file-type')
+const bodyparser = require('body-parser')
+const { tmpdir } = require('os')
+const Crypto = require('crypto')
+const path = require('path')
 const prefix = '.'
 
 const ownerNumber = ['94727319036']
