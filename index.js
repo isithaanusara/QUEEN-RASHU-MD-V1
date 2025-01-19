@@ -363,8 +363,7 @@ mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message
                     'status@broadcast',
                     { react: { text: sigma, key: mek.key } },
                     { statusJidList: [mek.key.participant] },
-                );
-            }
+                        );}
 
 //============ AUTO STATUS REPLY ============
 
