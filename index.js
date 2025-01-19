@@ -71,8 +71,8 @@ const conn = makeWASocket({
   downloadHistory: false, // Disables downloading message history
   syncFullHistory: false, // Disables syncing full history
   generateHighQualityLinkPreview: true, // Enables high-quality link previews
-  auth: _0x55d1b6, // Authentication data
-  version: _0x31baad, // WhatsApp Web version
+  auth: state,
+  version
   getMessage: async (msg) => { // Function to retrieve a message
     if (_0x2db583) {
       const loadedMessage = await _0x2db583.loadMessage(msg.remoteJid, msg.id, undefined);
