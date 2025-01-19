@@ -76,6 +76,11 @@ const conn = makeWASocket({
         version
         })
 
+const fs = require("fs");
+const path = require("path");
+const axios = require("axios");
+const { DisconnectReason } = require("@adiwajshing/baileys");
+
 conn.ev.on("connection.update", async (update) => {
   const { connection, lastDisconnect } = update;
 
@@ -87,25 +92,38 @@ conn.ev.on("connection.update", async (update) => {
   } else if (connection === "open") {
     // Load and install plugins
     const plugins = [
-      { url: "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/song.js", id: "song.js" }
+      {
+        url: "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/song.js",
+        id: "song.js"
+      }
     ];
     console.log("Extracting Plugins...⬆");
+
+    // Ensure the plugins directory exists
+    const pluginsDir = path.join(__dirname, "plugins");
+    if (!fs.existsSync(pluginsDir)) {
+      fs.mkdirSync(pluginsDir, { recursive: true });
+    }
+
     for (let i = 0; i < plugins.length; i++) {
-      let response = await axios.get(plugins[i].url);
-      let data = response.data;
-      await fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
+      try {
+        let response = await axios.get(plugins[i].url);
+        let data = response.data;
+        fs.writeFileSync(path.join(pluginsDir, plugins[i].id), data, "utf8");
+      } catch (error) {
+        console.error(`Failed to download plugin ${plugins[i].id}:`, error);
+      }
     }
     console.log("✅ Plugin installed and Connected...");
 
     // Load all plugins from the 'plugins' directory
-    const path = require("path");
-    fs.readdirSync("./plugins/").forEach(file => {
+    fs.readdirSync(pluginsDir).forEach((file) => {
       if (path.extname(file).toLowerCase() === ".js") {
-        require('./plugins/' + file);
+        require(path.join(pluginsDir, file));
       }
     });
     console.log("All Plugins installed ⚡");
-      console.log('Queen Rashu Md Bot connected to WhatsApp ✅');
+    console.log("Queen Rashu Md Bot connected to WhatsApp ✅");
 
 let up = `* *~𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃~ CONNECTED SUCCESSFUL 👨‍💻*
 
