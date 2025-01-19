@@ -79,7 +79,7 @@ const conn = makeWASocket({
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const { DisconnectReason } = require("@adiwajshing/baileys");
+//const { DisconnectReason } = require("@adiwajshing/baileys");
 
 conn.ev.on("connection.update", async (update) => {
   const { connection, lastDisconnect } = update;
