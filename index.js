@@ -71,21 +71,39 @@ const conn = makeWASocket({
         version
         })
     
-conn.ev.on('connection.update', (update) => {
-const { connection, lastDisconnect } = update
-if (connection === 'close') {
-if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
-connectToWA()
-}
-} else if (connection === 'open') {
-console.log('😼 Installing... ')
-const path = require('path');
-fs.readdirSync("./plugins/").forEach((plugin) => {
-if (path.extname(plugin).toLowerCase() == ".js") {
-require("./plugins/" + plugin);
-}
-});
-console.log('Plugins installed successful ✅')
+conn.ev.on("connection.update", async (update) => {
+  const {
+    connection,
+    lastDisconnect
+  } = update;
+
+  if (connection === "close") {
+    if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+      connectToWA();
+    }
+  } else if (connection === "open") {
+    const plugins = [
+      {
+        url: "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/song.js",
+        id: "song.js"
+      }
+    ];
+
+    console.log("Extracting Plugins...⬆");
+    for (let i = 0; i < plugins.length; i++) {
+      let response = await axios.get(plugins[i].url);
+      let data = response.data;
+      await fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
+    }
+    console.log("✅ Plugin installed and Connected...");
+
+    const path = require("path");
+    fs.readdirSync("./plugins/").forEach(file => {
+      if (path.extname(file).toLowerCase() == ".js") {
+        require('./plugins/' + file);
+      }
+    });
+    console.log("All Plugins installed ⚡")
 console.log('Queen Rashu Md Bot connected to whatsapp ✅')
 
 let up = `* *~𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃~ CONNECTED SUCCESSFUL 👨‍💻*
