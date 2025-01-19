@@ -5,6 +5,7 @@ const { runtime } = require('../lib/functions');
 
 cmd({
   pattern: "menu",
+  alias: ["මෙනු", "මෙනූ", 'කමාන්ඩ්'],
   desc: "Commands panel",
   react: '📚',
   filename: __filename
