@@ -80,6 +80,12 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 *11.2 ╎ ⛭ FALSE 🔐*
 ✤ ============================ ✤
 
+* *1️⃣1️⃣ 𝐀𝐔𝐓𝐎 𝐒𝐓𝐀𝐓𝐔𝐒 𝐑𝐄𝐀𝐂𝐓*
+*12.1 ╎ ⛭ TRUE 🔑*
+*12.2 ╎ ⛭ FALSE 🔐*
+✤ ============================ ✤
+
+
 > *© 𝙿𝙾𝚆𝙴𝙰𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝚁𝙰𝚂𝙷𝚄 𝙼𝙳 ✾*`;
 
         const vv = await conn.sendMessage(from, { image: { url: "https://i.ibb.co/BsjkCDP/9555.jpg"}, caption: desc }, { quoted: mek });
@@ -193,6 +199,14 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                         break;
                     case '11.2':     
                         reply(".update AUTO_STATUS_REPLY:false");
+                        reply(".restart" );
+                    break;
+                    case '12.1':    
+                        reply(".update AUTO_REACT_STATUS:true");
+                        reply(".restart" );
+                    break;
+                    case '12.2':    
+                        reply(".update AUTO_REACT_STATUS:false");
                         reply(".restart" );
                     break;
                     default:
