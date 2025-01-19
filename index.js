@@ -63,52 +63,55 @@ const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info
 var { version } = await fetchLatestBaileysVersion()
 
 const conn = makeWASocket({
-        logger: P({ level: 'silent' }),
-        printQRInTerminal: false,
-        browser: Browsers.macOS("Firefox"),
-        syncFullHistory: true,
-        auth: state,
-        version
-        })
-    
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path')
+  logger: P({ level: 'fatal' }), // Sets the logging level to 'fatal'
+  printQRInTerminal: true, // Prints the QR code in the terminal
+  browser: ["MR-Kushan", "safari", "1.0.0"], // Browser information
+  fireInitQueries: false, // Disables firing initial queries
+  shouldSyncHistoryMessage: false, // Disables history message syncing
+  downloadHistory: false, // Disables downloading message history
+  syncFullHistory: false, // Disables syncing full history
+  generateHighQualityLinkPreview: true, // Enables high-quality link previews
+  auth: _0x55d1b6, // Authentication data
+  version: _0x31baad, // WhatsApp Web version
+  getMessage: async (msg) => { // Function to retrieve a message
+    if (_0x2db583) {
+      const loadedMessage = await _0x2db583.loadMessage(msg.remoteJid, msg.id, undefined);
+      return loadedMessage.message || undefined;
+    }
+    return { conversation: "An Error Occurred, Repeat Command!" };
+  }
+});
 
+// Event listener for connection updates
 conn.ev.on("connection.update", async (update) => {
-  const {
-    connection,
-    lastDisconnect
-  } = update;
+  const { connection, lastDisconnect } = update;
 
   if (connection === "close") {
-    if (lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
+    // Reconnect if not logged out
+    if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
       connectToWA();
     }
   } else if (connection === "open") {
+    // Load and install plugins
     const plugins = [
-      {
-        url: "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/song.js",
-        id: "song.js"
-      }
+      { url: "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/song.js", id: "song.js" }
     ];
-
     console.log("Extracting Plugins...⬆");
+    for (let i = 0; i < plugins.length; i++) {
+      let response = await axios.get(plugins[i].url);
+      let data = response.data;
+      await fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
+    }
+    console.log("✅ Plugin installed and Connected...");
 
-    try {
-      for (let i = 0; i < plugins.length; i++) {
-        let response = await axios.get(plugins[i].url);
-        let data = response.data;
-        fs.writeFileSync(__dirname + "/plugins/" + plugins[i].id, data, "utf8");
+    // Load all plugins from the 'plugins' directory
+    const path = require("path");
+    fs.readdirSync("./plugins/").forEach(file => {
+      if (path.extname(file).toLowerCase() === ".js") {
+        require('./plugins/' + file);
       }
-      console.log("✅ Plugin installed and Connected...");
-
-      fs.readdirSync("./plugins/").forEach(file => {
-        if (path.extname(file).toLowerCase() === ".js") {
-          require('./plugins/' + file);
-        }
-      });
-      console.log("All Plugins installed ⚡");
+    });
+    console.log("All Plugins installed ⚡");
       console.log('Queen Rashu Md Bot connected to WhatsApp ✅');
 
 let up = `* *~𝐐𝐔𝚵𝚵𝐍 𝐑𝚫𝐒𝐇𝐔 𝐌𝐃~ CONNECTED SUCCESSFUL 👨‍💻*
