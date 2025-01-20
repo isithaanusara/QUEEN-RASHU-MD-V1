@@ -108,6 +108,9 @@ conn.ev.on("connection.update", async (update) => {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/autoreply.js",
           'id': "autoreply.js"
         }, {
+          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/hirunews.js",
+          'id': "hirunews.js"
+        }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/dog.js",
           'id': "dog.js"
         }, {
