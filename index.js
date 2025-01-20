@@ -117,9 +117,6 @@ conn.ev.on("connection.update", async (update) => {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/listcmd.js",
           'id': "listcmd.js"
         }, {
-          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/loadingalive.js",
-          'id': 'loadingalive.js'
-        }, {
           'url': 'https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/msgall.js',
           'id': 'msgall.js'
         }, {
