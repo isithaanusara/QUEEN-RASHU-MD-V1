@@ -171,6 +171,9 @@ conn.ev.on("connection.update", async (update) => {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/weather.js",
           'id': "weather.js"
         }, {
+          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/ezgroup.js",
+          'id': "ezgroup.js"
+        }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/video.js",
           'id': "video.js"
       }
