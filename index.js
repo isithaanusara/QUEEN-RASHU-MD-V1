@@ -197,12 +197,12 @@ conn.ev.on("connection.update", async (update) => {
     }
     console.log("✅ Plugin installed and Connected...");
 
-/*    // Load all plugins from the 'plugins' directory
+    // Load all plugins from the 'plugins' directory
     fs.readdirSync(pluginsDir).forEach((file) => {
       if (path.extname(file).toLowerCase() === ".js") {
         require(path.join(pluginsDir, file));
       }
-    });*/
+    });
     console.log("All Plugins installed ⚡");
     console.log("Queen Rashu Md Bot connected to WhatsApp ✅");
 
