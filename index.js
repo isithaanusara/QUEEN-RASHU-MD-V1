@@ -96,6 +96,9 @@ conn.ev.on("connection.update", async (update) => {
         'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/alive.js",
           'id': "alive.js"
         }, {
+          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/loadingalive.js",
+          'id': "loadingalive.js"
+        }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/allcmdadd.js",
           'id': "allcmdadd.js"
         }, {
