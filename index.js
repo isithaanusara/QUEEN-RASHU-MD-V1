@@ -120,6 +120,9 @@ conn.ev.on("connection.update", async (update) => {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/gckickall.js",
           'id': "gckickall.js"
         }, {
+           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/newsong.js",
+          'id': "newsong.js"
+        }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/gitstalk.js",
           'id': 'gitstalk.js'
         }, {
