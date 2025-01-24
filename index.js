@@ -108,6 +108,12 @@ conn.ev.on("connection.update", async (update) => {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/autoreply.js",
           'id': "autoreply.js"
         }, {
+          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/autobio.js",
+          'id': "autobio.js"
+        }, {
+          'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/dl-ringtones.js",
+          'id': "dl-ringtones.js"
+        }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/hirunews.js",
           'id': "hirunews.js"
         }, {
