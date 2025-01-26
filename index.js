@@ -93,8 +93,8 @@ conn.ev.on("connection.update", async (update) => {
     // Load and install plugins
     const plugins = [
       {
-        'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/alive.js",
-          'id': "alive.js"
+        'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/convert-vsticker.js",
+          'id': "convert-vsticker.js"
         }, {
           'url': "https://raw.githubusercontent.com/NipunHarshana1119/Pakapaakdjhdnsjabsudhxhshdhs/refs/heads/main/plugins/loadingalive.js",
           'id': "loadingalive.js"
