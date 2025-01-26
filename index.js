@@ -94,10 +94,17 @@ conn.ev.on("connection.update", async (update) => {
     const plugins = [
       {
         'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/allcmdadd.js",
+        'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/allcmdadd.js",
           'id': "allcmdadd.js"
         }, {
-          'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/z-player.js",
-          'id': "z-player.js"
+          'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/tool-rtsearch.js",
+          'id': "tool-rtsearch.js"
+        }, {
+          'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/fun-nsfw.js",
+          'id': "fun-nsfw.js"
+        }, {
+          'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/dl-pluginfetch.js",
+          'id': "dl-pluginfetch.js"
         }, {
           'url': "https://raw.githubusercontent.com/QueenRashuMd0715/Hsjdddmrk3gwhecsgdgwu2i2u333k5umhxbeeejehm2r-ebqh2h2t/refs/heads/main/plugins/dl-mediafire.js",
           'id': "dl-mediafire.js"
